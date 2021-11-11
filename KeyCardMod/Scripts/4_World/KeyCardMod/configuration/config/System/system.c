@@ -131,6 +131,11 @@ class KeyCard_Config_System
 		m_KeyCard_System_ConfigData.GetSystemArray().Insert(new KCM_Config_System("(78) Blue Crates Spawn Meds (1 true, 0 false)", 1));
 		m_KeyCard_System_ConfigData.GetSystemArray().Insert(new KCM_Config_System("(79) Purple Crates Spawn Meds (1 true, 0 false)", 1));
 		m_KeyCard_System_ConfigData.GetSystemArray().Insert(new KCM_Config_System("(80) Red Crates Spawn Meds (1 true, 0 false)", 1));
+		m_KeyCard_System_ConfigData.GetSystemArray().Insert(new KCM_Config_System("(81) Yellow Card Usage Allotment", 5));
+		m_KeyCard_System_ConfigData.GetSystemArray().Insert(new KCM_Config_System("(82) Green Card Usage Allotment", 4));
+		m_KeyCard_System_ConfigData.GetSystemArray().Insert(new KCM_Config_System("(83) Blue Card Usage Allotment", 3));
+		m_KeyCard_System_ConfigData.GetSystemArray().Insert(new KCM_Config_System("(84) Purple Card Usage Allotment", 2));
+		m_KeyCard_System_ConfigData.GetSystemArray().Insert(new KCM_Config_System("(85) Red Card Usage Allotment", 1));
 		
 		/*m_KeyCard_System_ConfigData.GetLocationsYArray().Insert(new KCM_Yellow_Locations("0.0 0.0 0.0", "0.0 0.0 0.0"));
 		m_KeyCard_System_ConfigData.GetLocationsYArray().Insert(new KCM_Yellow_Locations("0.0 0.0 0.0", "0.0 0.0 0.0"));
