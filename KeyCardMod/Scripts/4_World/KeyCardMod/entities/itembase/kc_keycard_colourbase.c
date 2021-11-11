@@ -2,14 +2,45 @@ class KC_KeyCard_ColourBase: ItemBase
 {
 	protected int kcm_RemainingUses;
 	
+	protected ref array<ref KCM_Config_System> kcm_SystemConfig;
+	
 	void KC_KeyCard_ColourBase()
 	{
 		RegisterNetSyncVariableInt("kcm_RemainingUses", 1, int.MAX)
+		kcm_SystemConfig = KeyCardMod_System.GetInstance().GetConfig().GetConfigData().GetSystemArray();
+		SetInitialUsageAllotment();
 	}
 	
 	int GetRemainingUses()
 	{
 		return kcm_RemainingUses;
+	}
+	
+	void SetInitialUsageAllotment()
+	{
+		int remainingUses = GetRemainingUses();
+		if(!remainingUses)
+		{
+			switch(GetType())
+			{
+				case "Kc_KeyCard_Yellow":
+					kcm_RemainingUses = kcm_SystemConfig.Get(81).GetSystemSetting();
+					break;
+				case "Kc_KeyCard_Green":
+					kcm_RemainingUses = kcm_SystemConfig.Get(82).GetSystemSetting();
+					break;
+				case "Kc_KeyCard_Blue":
+					kcm_RemainingUses = kcm_SystemConfig.Get(83).GetSystemSetting();
+					break;
+				case "Kc_KeyCard_Purple":
+					kcm_RemainingUses = kcm_SystemConfig.Get(84).GetSystemSetting();
+					break;
+				case "Kc_KeyCard_Red":
+					kcm_RemainingUses = kcm_SystemConfig.Get(85).GetSystemSetting();
+					break;
+			}
+			SetSynchDirty();
+		}
 	}
 	
 	void SetRemainingUses(int remainingUses)
@@ -20,7 +51,7 @@ class KC_KeyCard_ColourBase: ItemBase
 	
 	bool IsMatchingTier(string typeName)
 	{
-		return GetType() == "KC_KeyCard_" + typeName.SubstringInverted(typeName, 0, 8);
+		return GetType() == "KC_KeyCard" + typeName.SubstringInverted(typeName, 0, 8);
 	}
 
 	override void OnStoreSave(ParamsWriteContext ctx)
