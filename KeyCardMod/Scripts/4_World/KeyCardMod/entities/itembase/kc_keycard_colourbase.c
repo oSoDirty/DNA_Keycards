@@ -18,28 +18,31 @@ class KC_KeyCard_ColourBase: ItemBase
 	
 	void SetInitialUsageAllotment()
 	{
-		int remainingUses = GetRemainingUses();
-		if(!remainingUses)
+		if(kcm_SystemConfig)
 		{
-			switch(GetType())
+			int remainingUses = GetRemainingUses();
+			if(!remainingUses)
 			{
-				case "Kc_KeyCard_Yellow":
-					kcm_RemainingUses = kcm_SystemConfig.Get(81).GetSystemSetting();
-					break;
-				case "Kc_KeyCard_Green":
-					kcm_RemainingUses = kcm_SystemConfig.Get(82).GetSystemSetting();
-					break;
-				case "Kc_KeyCard_Blue":
-					kcm_RemainingUses = kcm_SystemConfig.Get(83).GetSystemSetting();
-					break;
-				case "Kc_KeyCard_Purple":
-					kcm_RemainingUses = kcm_SystemConfig.Get(84).GetSystemSetting();
-					break;
-				case "Kc_KeyCard_Red":
-					kcm_RemainingUses = kcm_SystemConfig.Get(85).GetSystemSetting();
-					break;
+				switch(GetType())
+				{
+					case "Kc_KeyCard_Yellow":
+						kcm_RemainingUses = kcm_SystemConfig.Get(81).GetSystemSetting();
+						break;
+					case "Kc_KeyCard_Green":
+						kcm_RemainingUses = kcm_SystemConfig.Get(82).GetSystemSetting();
+						break;
+					case "Kc_KeyCard_Blue":
+						kcm_RemainingUses = kcm_SystemConfig.Get(83).GetSystemSetting();
+						break;
+					case "Kc_KeyCard_Purple":
+						kcm_RemainingUses = kcm_SystemConfig.Get(84).GetSystemSetting();
+						break;
+					case "Kc_KeyCard_Red":
+						kcm_RemainingUses = kcm_SystemConfig.Get(85).GetSystemSetting();
+						break;
+				}
+				SetSynchDirty();
 			}
-			SetSynchDirty();
 		}
 	}
 	
