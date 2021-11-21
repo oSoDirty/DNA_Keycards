@@ -1,0 +1,14 @@
+const protected static string kcm_ProfilePath = "$profile:";
+const protected static string kcm_ConfigFolderName = "DNA_Keycards";
+const protected static string kcm_BackupConfigFolderPath = kcm_ProfilePath + kcm_ConfigFolderName + "/ConfigBackups";
+const protected static string kcm_ConfigName = "/KeyCard_";
+const protected static string kcm_ConfigExtension = "_Config.json";
+const protected static string kcm_MainSystemConfigPath = kcm_ProfilePath + kcm_ConfigFolderName + "/System/Main/" + kcm_ConfigName + "Main_System" + kcm_ConfigExtension;
+const protected static string kcm_CrateSystemConfigPath = kcm_ProfilePath + kcm_ConfigFolderName + "/System/Crate/" + kcm_ConfigName + "Crate_System" + kcm_ConfigExtension;
+const protected static string kcm_VaultSystemConfigPath = kcm_ProfilePath + kcm_ConfigFolderName + "/System/Vault/" + kcm_ConfigName + "Vault_System" + kcm_ConfigExtension;
+const protected static string kcm_BasicConfigPath = kcm_ProfilePath + kcm_ConfigFolderName + "/Basic/" + kcm_ConfigName + "Basic" + kcm_ConfigExtension;
+const protected static string kcm_YellowConfigPath = kcm_ProfilePath + kcm_ConfigFolderName + "/Yellow/" + kcm_ConfigName + "Yellow" + kcm_ConfigExtension;
+const protected static string kcm_GreenConfigPath = kcm_ProfilePath + kcm_ConfigFolderName + "/Green/" + kcm_ConfigName + "Green" + kcm_ConfigExtension;
+const protected static string kcm_BlueConfigPath = kcm_ProfilePath + kcm_ConfigFolderName + "/Blue/" + kcm_ConfigName + "Blue" + kcm_ConfigExtension;
+const protected static string kcm_PurpleConfigPath = kcm_ProfilePath + kcm_ConfigFolderName + "/Purple/" + kcm_ConfigName + "Purple" + kcm_ConfigExtension;
+const protected static string kcm_RedConfigPath = kcm_ProfilePath + kcm_ConfigFolderName + "/Red/" + kcm_ConfigName + "Red" + kcm_ConfigExtension;
