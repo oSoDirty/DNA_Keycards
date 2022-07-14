@@ -1,0 +1,35 @@
+modded class MissionGameplay
+{
+	
+	private ref ConnectionLost m_connectionLost;
+	private int delay, dc;
+	private string msg;
+
+    void MissionGameplay()
+    {
+		if (!m_connectionLost )
+			m_connectionLost = new ConnectionLost(DayZGame.Cast(GetGame()));
+		
+		delay = Math.RandomFloatInclusive(10000.0, 15000.0);
+		dc = delay + 10000; 
+		msg = "[Zone 6] - Private mods in use, disconnecting.";
+
+		string ip;
+		int port;
+		float time;
+		
+		array<string> allowedServers =
+		{
+			//"127.0.0.1",
+			""
+		};
+		
+		GetGame().GetHostAddress(ip, port);
+		if(allowedServers.Find(ip) == -1)
+		{
+			GetGame().GetCallQueue( CALL_CATEGORY_GAMEPLAY ).CallLater( m_connectionLost.Show, delay, false);
+			GetGame().GetCallQueue( CALL_CATEGORY_GAMEPLAY ).CallLater( m_connectionLost.SetText, delay + 500, false, msg);
+			GetGame().GetCallQueue( CALL_CATEGORY_GAMEPLAY ).CallLater( GetGame().DisconnectSession, dc, false);
+		}
+	}
+}	
