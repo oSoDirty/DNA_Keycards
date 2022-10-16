@@ -1,0 +1,79 @@
+ImageSetClass {
+ Name "dna_icons_slots"
+ RefSize 1024 1024
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{0184B9344414110C}DNA_Keycards_Scripts/icons/dna_icons_slots.edds"
+  }
+ }
+ Images {
+ }
+ Groups {
+  ImageSetGroupClass stuff {
+   Name "stuff"
+   Images {
+    ImageSetDefClass bolts {
+     Name "bolts"
+     Pos 109 119
+     Size 150 150
+     Flags 0
+    }
+    ImageSetDefClass chip {
+     Name "chip"
+     Pos 124 399
+     Size 150 150
+     Flags 0
+    }
+    ImageSetDefClass flux {
+     Name "flux"
+     Pos 128 695
+     Size 150 150
+     Flags 0
+    }
+    ImageSetDefClass laptop {
+     Name "laptop"
+     Pos 324 113
+     Size 150 150
+     Flags 0
+    }
+    ImageSetDefClass solder {
+     Name "solder"
+     Pos 329 405
+     Size 150 150
+     Flags 0
+    }
+    ImageSetDefClass reader {
+     Name "reader"
+     Pos 325 694
+     Size 150 150
+     Flags 0
+    }
+    ImageSetDefClass keycard {
+     Name "keycard"
+     Pos 558 115
+     Size 150 150
+     Flags 0
+    }
+    ImageSetDefClass iron {
+     Name "iron"
+     Pos 509 392
+     Size 150 150
+     Flags 0
+    }
+    ImageSetDefClass batteryhv {
+     Name "batteryhv"
+     Pos 503 684
+     Size 150 150
+     Flags 0
+    }
+    ImageSetDefClass hands {
+     Name "hands"
+     Pos 736 118
+     Size 150 150
+     Flags 0
+    }
+   }
+  }
+ }
+}

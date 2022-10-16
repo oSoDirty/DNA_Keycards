@@ -1,0 +1,1 @@
+class DNA_Workbench_Hologram: ItemBase {}

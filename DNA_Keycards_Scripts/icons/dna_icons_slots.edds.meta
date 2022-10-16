@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{0184B9344414110C}DNA_Keycards_Scripts/icons/dna_icons_slots.edds"
+ Author "desktop-e4hh37p"
+ ChangeDate 616918290
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "dna_icons_slots.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

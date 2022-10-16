@@ -1,0 +1,31 @@
+modded class ActionConstructor 
+{
+    override void RegisterActions(TTypenameArray actions)
+    {
+        super.RegisterActions(actions);
+        actions.Insert(ActionHandleKeycard);
+		actions.Insert(ActionOpenSmolCrate);
+		actions.Insert(ActionRequiresKeycard);
+		actions.Insert(ActionActivateKeycard);
+		actions.Insert(ActionUnpackMicrochip);
+		actions.Insert(ActionUnlockSecuredDoors);
+		actions.Insert(ActionOpenWorkbench);
+		actions.Insert(ActionCloseWorkbench);
+		actions.Insert(ActionAttachBattery40V);
+		actions.Insert(ActionDetachBattery40V);
+		actions.Insert(ActionAttachBlankCard);
+		actions.Insert(ActionDetachBlankCard);
+		actions.Insert(ActionAttachErrorCard);
+		actions.Insert(ActionDetachErrorCard);
+		actions.Insert(ActionSolderChip);
+		actions.Insert(ActionRemoveChip);
+		actions.Insert(ActionProgramKeycard);
+		actions.Insert(ActionBuildWorkBench);
+		actions.Insert(ActionDismantleWorkBench);
+		actions.Insert(ActionDismantleWorkBenchKit);
+		actions.Insert(ActionUseOneWayDoor);
+		actions.Insert(ActionUnlockOneWayDoors);
+		actions.Insert(ActionUnlockWarpDoors);
+		actions.Insert(ActionUseWarpDoor);
+    }
+};
