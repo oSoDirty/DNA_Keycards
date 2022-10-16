@@ -1,2 +1,2 @@
 # DNA_KeyCards
-A mod for DayZ Standalone that adds locked containers that require a keycard to access.
+A fully configurable mod for DayZ Standalone that adds various locked containers and doors that require a keycard to access, as well as some that do not require a keycard.
